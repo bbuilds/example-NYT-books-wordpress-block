@@ -23,6 +23,10 @@ defined( 'ABSPATH' ) || exit;
 //Pull in Admin setup
 require_once( dirname( __FILE__ ) . '/inc/admin.php' );
 
+
+//Pull in rest route setup
+require_once( dirname( __FILE__ ) . '/inc/rest.php' );
+
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers also all assets so they can be enqueued
