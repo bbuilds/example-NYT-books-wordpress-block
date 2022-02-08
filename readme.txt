@@ -1,19 +1,12 @@
 === Forumone Test ===
-Contributors:      The WordPress Contributors
+Contributors:      Branden Youngs
 Tags:              block
 Tested up to:      5.9
 Stable tag:        0.1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Example block written with ESNext standard and JSX support – build step required.
-
-== Description ==
-
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
-
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+An example block for Forum One levarging NYT Books API.
 
 == Installation ==
 
@@ -25,31 +18,25 @@ e.g.
 1. Activate the plugin through the 'Plugins' screen in WordPress
 
 
-== Frequently Asked Questions ==
+== API Info ==
 
-= A question that someone might have =
+Info on API Used can be found at: https://developer.nytimes.com/docs/books-product/1/routes/lists.json/get
 
-An answer to that question.
+I tested the plugin with the URL:
 
-= What about foo bar? =
+https://api.nytimes.com/svc/books/v3/lists.json?list=hardcover-fiction&api-key={API_KEY}
 
-Answer to foo bar dilemma.
 
-== Screenshots ==
+== Working Screen Cast  && Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+video:
+https://monosnap.com/file/OCf6UDLcwPyoQE2ltgzQT5niacfOjy
 
-== Changelog ==
+Admin Dashboard SS:
+https://monosnap.com/file/MkmiZdyFlWuGndIoXIQ5qYjOk3w2S3
 
-= 0.1.0 =
-* Release
+Block Editor SS:
+https://monosnap.com/file/7cHQNladr4xH53kQI0l5RBvxSm8HKd
 
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+Frontend Block SS:
+https://monosnap.com/file/OCf6UDLcwPyoQE2ltgzQT5niacfOjy
