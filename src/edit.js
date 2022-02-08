@@ -33,6 +33,9 @@ import { useEffect } from "@wordpress/element";
 
 import { Spinner, PanelBody, RangeControl } from "@wordpress/components";
 
+//Custom Book Card Component
+import BookCard from "./components/Card";
+
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -121,14 +124,11 @@ export default function Edit({ attributes, setAttributes }) {
 							resultsList.map((item, index) => {
 								return (
 									<li key={index}>
-										<div className="book-card">
-											<h2>{item?.book_details[0]?.title}</h2>
-											<p>{item?.book_details[0]?.description}</p>
-											<span>
-												{__("Written By:", "forumone-test")}{" "}
-												{item?.book_details[0]?.author}
-											</span>
-										</div>
+										<BookCard
+											title={item?.book_details[0]?.title}
+											description={item?.book_details[0]?.description}
+											author={item?.book_details[0]?.author}
+										/>
 									</li>
 								);
 							})}
