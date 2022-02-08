@@ -111,11 +111,7 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 			</InspectorControls>
-			<div
-				{...useBlockProps({
-					className: "forum-one-example-block",
-				})}
-			>
+			<div {...useBlockProps()}>
 				{isLoading && resultsList ? (
 					<Spinner />
 				) : (

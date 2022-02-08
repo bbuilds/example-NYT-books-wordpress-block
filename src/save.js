@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from "@wordpress/i18n";
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -11,7 +11,10 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from "@wordpress/block-editor";
+
+//Custom Book Card Component
+import BookCard from "./components/Card";
 
 /**
  * The save function defines the way in which the different attributes should
@@ -22,13 +25,25 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save({ attributes }) {
+	const { resultsList } = attributes;
+
 	return (
-		<p { ...useBlockProps.save() }>
-			{ __(
-				'Forumone Test – hello from the saved content!',
-				'forumone-test'
-			) }
-		</p>
+		<div {...useBlockProps.save()}>
+			<ul className="results">
+				{resultsList &&
+					resultsList.map((item, index) => {
+						return (
+							<li key={index}>
+								<BookCard
+									title={item?.book_details[0]?.title}
+									description={item?.book_details[0]?.description}
+									author={item?.book_details[0]?.author}
+								/>
+							</li>
+						);
+					})}
+			</ul>
+		</div>
 	);
 }
