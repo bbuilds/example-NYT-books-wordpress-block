@@ -96,8 +96,45 @@ export default function Edit({ attributes, setAttributes }) {
 	}
 
 	return (
-		<p {...useBlockProps()}>
-			{__("Forumone Test – hello from the editor!", "forumone-test")}
-		</p>
+		<>
+			<InspectorControls>
+				<PanelBody>
+					<RangeControl
+						label={__("Number of Posts", "forumone-test")}
+						min={1}
+						max={10}
+						onChange={onChangeNumberOfPosts}
+						value={numberOfPosts}
+					/>
+				</PanelBody>
+			</InspectorControls>
+			<div
+				{...useBlockProps({
+					className: "forum-one-example-block",
+				})}
+			>
+				{isLoading && resultsList ? (
+					<Spinner />
+				) : (
+					<ul className="results">
+						{resultsList &&
+							resultsList.map((item, index) => {
+								return (
+									<li key={index}>
+										<div className="book-card">
+											<h2>{item?.book_details[0]?.title}</h2>
+											<p>{item?.book_details[0]?.description}</p>
+											<span>
+												{__("Written By:", "forumone-test")}{" "}
+												{item?.book_details[0]?.author}
+											</span>
+										</div>
+									</li>
+								);
+							})}
+					</ul>
+				)}
+			</div>
+		</>
 	);
 }

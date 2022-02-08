@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/forumone-test",
+	"version": "0.1.0",
+	"title": "Forumone Test",
+	"category": "widgets",
+	"icon": "hammer",
+	"description": "Example block levaraging NYT Books API.",
+	"attributes": {
+		"apiData": {
+			"type": "array",
+			"default": []
+		},
+		"isLoading": {
+			"type": "boolean",
+			"default": true
+		},
+		"resultsList": {
+			"type": "array",
+			"default": []
+		},
+		"numberOfPosts": {
+			"type": "number",
+			"default": 4
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "forumone-test",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
