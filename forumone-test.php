@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Forumone Test
- * Description:       Example block written with ESNext standard and JSX support – build step required.
+ * Description:       Example block created using NYT Books API.
  * Requires at least: 5.8
  * Requires PHP:      7.0
  * Version:           0.1.0
@@ -13,6 +13,16 @@
  * @package           create-block
  */
 
+
+namespace ForumOneExampleBlock;
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
+
+//Pull in Admin setup
+require_once( dirname( __FILE__ ) . '/inc/admin.php' );
+
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers also all assets so they can be enqueued
@@ -23,4 +33,4 @@
 function create_block_forumone_test_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
-add_action( 'init', 'create_block_forumone_test_block_init' );
+add_action( 'init', __NAMESPACE__ . '\create_block_forumone_test_block_init' );

@@ -5,8 +5,26 @@
 	"version": "0.1.0",
 	"title": "Forumone Test",
 	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"icon": "hammer",
+	"description": "Example block levaraging NYT Books API.",
+	"attributes": {
+		"apiData": {
+			"type": "array",
+			"default": []
+		},
+		"isLoading": {
+			"type": "boolean",
+			"default": true
+		},
+		"resultsList": {
+			"type": "array",
+			"default": []
+		},
+		"numberOfPosts": {
+			"type": "number",
+			"default": 4
+		}
+	},
 	"supports": {
 		"html": false
 	},
