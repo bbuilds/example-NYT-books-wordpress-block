@@ -1,12 +1,12 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "create-block/forumone-test",
+	"name": "create-block/bbuilds-nyt-block",
 	"version": "0.1.0",
-	"title": "Forumone Test",
+	"title": "BBuilds NYT Books API Demo Block",
 	"category": "widgets",
 	"icon": "hammer",
-	"description": "Example block levaraging NYT Books API.",
+	"description": "Example block leveraging NYT Books API.",
 	"attributes": {
 		"apiData": {
 			"type": "array",
@@ -28,7 +28,7 @@
 	"supports": {
 		"html": false
 	},
-	"textdomain": "forumone-test",
+	"textdomain": "bbuilds-nyt-block",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

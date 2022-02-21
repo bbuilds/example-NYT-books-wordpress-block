@@ -11,7 +11,7 @@ export default function Card({ title, description, author }) {
 			<h2>{title}</h2>
 			<p>{description}</p>
 			<span>
-				{__("Written By:", "forumone-test")} {author}
+				{__("Written By:", "bbuilds-nyt-block")} {author}
 			</span>
 		</div>
 	);

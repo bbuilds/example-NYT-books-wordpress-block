@@ -44,7 +44,7 @@ import BookCard from "./components/Card";
  */
 import "./editor.scss";
 
-const END_POINT = "forumone/v1/nyt";
+const END_POINT = "bbuilds/v1/nyt";
 
 //Grabbing info form rest API
 async function fetchAndSetResponse(setAttributes) {
@@ -103,7 +103,7 @@ export default function Edit({ attributes, setAttributes }) {
 			<InspectorControls>
 				<PanelBody>
 					<RangeControl
-						label={__("Number of Posts", "forumone-test")}
+						label={__("Number of Posts", "bbuilds-nyt-block")}
 						min={1}
 						max={10}
 						onChange={onChangeNumberOfPosts}

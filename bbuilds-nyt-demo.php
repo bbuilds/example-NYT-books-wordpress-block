@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Forumone Test
+ * Plugin Name:       BBuilds NYT Books Demo Block
  * Description:       Example block created using NYT Books API.
  * Requires at least: 5.8
  * Requires PHP:      7.0
@@ -8,13 +8,13 @@
  * Author:            The WordPress Contributors
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       forumone-test
+ * Text Domain:       bbuilds-nyt-block
  *
  * @package           create-block
  */
 
 
-namespace ForumOneExampleBlock;
+namespace BBuildsNYTBlock;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -34,7 +34,7 @@ require_once( dirname( __FILE__ ) . '/inc/rest.php' );
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function create_block_forumone_test_block_init() {
+function create_block_bbuilds_test_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
-add_action( 'init', __NAMESPACE__ . '\create_block_forumone_test_block_init' );
+add_action( 'init', __NAMESPACE__ . '\create_block_bbuilds_test_block_init' );
